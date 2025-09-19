@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: orange;
+        }
+        table{
+            align-self: center;
+            background-color: white;
+            border-radius: 10px;
+            border-collapse: separate;
+            border-spacing: 0px;
+
+        }
+        th:first-child{
+            border-top-left-radius: 10px;
+        }
+        th:last-child{
+            border-top-right-radius: 10px;
+        }
+        tr:last-child:first-child{
+            border-bottom-left-radius: 10px;
+        }
+        tr:last-child:last-child{
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <script src="login.js"></script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <th>
+                <form onsubmit="return validateForm()" method="POST" action="login.php">
+                    <label>Email</label>
+                    <input type="text" id="email" name="email" required><br>
+
+                    <label>Password</label>
+                    <input type="text" id="password" name="password" required><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
